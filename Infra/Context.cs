@@ -6,7 +6,7 @@ namespace ProjetoGamer_MVC.Infra
     public class Context : DbContext
     {
         public Context()
-        {  
+        {
         }
 
         public Context(DbContextOptions<Context> options) : base(options)
@@ -15,26 +15,26 @@ namespace ProjetoGamer_MVC.Infra
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           if (!optionsBuilder.IsConfigured)
-           {
-            // string de conexão com o banco
-            // Data source : o nome do gerenciador do banco
-            // initial catalog : o nome do banco de dados
+            if (!optionsBuilder.IsConfigured)
+            {
+                // string de conexão com o banco
+                // Data source : o nome do gerenciador do banco
+                // initial catalog : o nome do banco de dados
 
-            // Autenticação do Windows
-            // Integrated Security : Autenticação do Windows
-            // TrustServerCertificate :
+                // Autenticação do Windows
+                // Integrated Security : Autenticação do Windows
+                // TrustServerCertificate :
 
-            // Autenticação pelo SqlServer
-            //User Id = "Nome do seu usuario de login"
-            //pmd = "senha do seu usuario"
+                // Autenticação pelo SqlServer
+                //User Id = "Nome do seu usuario de login"
+                //pwd = "senha do seu usuario"
 
-             optionsBuilder.UseSqlServer("Data Source = ; initial catalog = gamerMVC; Integrated Security = true; TrustServerCertificate = true");
-           }
+                optionsBuilder.UseSqlServer("Data Source = NOTE23-S15; initial catalog = gamerManha; User Id = sa; pwd = Senai@134; TrustServerCertificate = true");
+            }
         }
+        public DbSet<Jogador> Jogador { get; set; }
+
+        public DbSet<Equipe> Equipe { get; set; }
     }
 
-    public DbSet<Jogador> Jogador {get; set;}
-
-    public DbSet<Equipe> Equipe {get; set;}
 }

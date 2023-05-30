@@ -13,5 +13,6 @@ namespace ProjetoGamer_MVC.Models
 
         [ForeignKey("Equipe")] // DATA ANNOTATION - IdEquipe
         public int IdEquipe { get; set; }
+        public Equipe Equipe { get; set; }
     }
 }
