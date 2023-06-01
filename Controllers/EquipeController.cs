@@ -79,6 +79,26 @@ namespace ProjetoGamer_MVC.Controllers
             return LocalRedirect("~/Equipe/Listar");
         }
 
+        [Route("Excluir/{id}")]
+        public IActionResult Excluir(int id)
+        {
+            Equipe equipeBuscada = c.Equipe.First(e => e.IdEquipe == id);
+
+            c.Remove(equipeBuscada);
+
+            c.SaveChanges();
+
+            return LocalRedirect("~/Equipe/Listar");
+        }
+
+
+
+
+
+
+        
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

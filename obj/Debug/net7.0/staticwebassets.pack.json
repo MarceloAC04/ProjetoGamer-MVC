@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\barcelona.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\barcelona.png"
+    },
+    {
+      "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\bayern.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\bayern.png"
+    },
+    {
+      "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\cor.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\cor.png"
+    },
+    {
+      "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\inter.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\inter.png"
+    },
+    {
+      "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\padrao.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\padrao.png"
+    },
+    {
       "Id": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

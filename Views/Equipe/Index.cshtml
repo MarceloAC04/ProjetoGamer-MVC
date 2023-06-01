@@ -9,7 +9,7 @@
 <form method="post" action='@Url.Action("Cadastrar")'  enctype="multipart/form-data">
 
     <label for="Nome">Nome</label>
-    <input type="text" name="Nome">
+    <input type="text" name="Nome" required>
 
     <label for="Imagem">Imagem</label>
     <input type="file" name="Imagem">
@@ -25,6 +25,7 @@
         <th>Id</th>
         <th>Nome</th>
         <th>Image</th>
+        <th>Ações</th>
     </thead>
 
     <tbody>
@@ -34,7 +35,12 @@
         <tr>
             <td>@equipe.IdEquipe</td>
             <td>@equipe.Nome</td>
-            <td>@equipe.Imagem</td>
+            <td>
+                <img src="/img/Equipes/@equipe.Imagem" alt="Imagem do escudo da equipe @equipe.Nome" width="50px">
+                </td>
+            <td>
+                <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">Excluir</a>
+            </td>
         </tr>
         }
 
