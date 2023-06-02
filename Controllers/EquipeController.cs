@@ -45,7 +45,7 @@ namespace ProjetoGamer_MVC.Controllers
 
                 var file = form.Files[0];
 
-                var folder = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img/Equipes");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
 
                 if (!Directory.Exists(folder))
                 {
@@ -53,7 +53,7 @@ namespace ProjetoGamer_MVC.Controllers
                 }
 
                 //gera o caminho completo até o caminho do arquivo(imagem - nome da extensão)
-                var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwoot/img/",folder,file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwoot/img/", folder, file.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
@@ -71,7 +71,7 @@ namespace ProjetoGamer_MVC.Controllers
 
             //adiciona objeto na tabela do BD
             c.Equipe.Add(novaEquipe);
- 
+
             //salva as alterações feitas do BD
             c.SaveChanges();
 
@@ -92,11 +92,64 @@ namespace ProjetoGamer_MVC.Controllers
         }
 
 
+        [Route("Editar/{id}")]
+        public IActionResult Editar(int id)
+        {
+            Equipe equipe = c.Equipe.First(x => x.IdEquipe == id);
 
+            ViewBag.Equipe = equipe;
 
+            return View("Edit");
+        }
 
+        [Route("Atualizar")]
+        public IActionResult Atualizar(IFormCollection form)
+        {
+            Equipe equipe = new Equipe();
 
-        
+            equipe.IdEquipe = int.Parse(form["IdEquipe"].ToString());
+
+            equipe.Nome = form["Nome"].ToString();
+
+            if (form.Files.Count > 0)
+            {
+
+                var file = form.Files[0];
+
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                //gera o caminho completo até o caminho do arquivo(imagem - nome da extensão)
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwoot/img/", folder, file.FileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                equipe.Imagem = file.FileName;
+
+            }
+            else
+            {
+                equipe.Imagem = "padrao.png";
+            }
+
+           Equipe equipeBuscada = c.Equipe.First(x => x.IdEquipe == equipe.IdEquipe);
+
+           equipeBuscada.Nome = equipe.Nome;
+           equipeBuscada.Imagem = equipe.Imagem;
+
+           c.Equipe.Update(equipeBuscada);
+
+           c.SaveChanges();
+           
+           return LocalRedirect("~/Equipe/Listar");
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

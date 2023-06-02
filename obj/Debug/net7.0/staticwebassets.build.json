@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Uou0gQteQH/UxIPxSLhxgQl6DEzZ4m+T4hzXH87ihZk=",
+  "Hash": "E9GsNM2RhNVlckDbyLceHkAvCd08Gbpk1VkVBHFfGBk=",
   "Source": "ProjetoGamer-MVC",
   "BasePath": "_content/ProjetoGamer-MVC",
   "Mode": "Default",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\bayern.png"
     },
     {
-      "Identity": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\cor.png",
+      "Identity": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\corinthians.png",
       "SourceId": "ProjetoGamer-MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\",
       "BasePath": "_content/ProjetoGamer-MVC",
-      "RelativePath": "img/Equipes/cor.png",
+      "RelativePath": "img/Equipes/corinthians.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Equipes\\cor.png"
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\corinthians.png"
     },
     {
       "Identity": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\inter.png",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\inter.png"
+    },
+    {
+      "Identity": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\milan.png",
+      "SourceId": "ProjetoGamer-MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer-MVC",
+      "RelativePath": "img/Equipes/milan.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\milan.png"
     },
     {
       "Identity": "C:\\Users\\48260449846\\Desktop\\ProjetoGamer-MVC\\wwwroot\\img\\Equipes\\padrao.png",
