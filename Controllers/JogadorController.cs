@@ -37,6 +37,10 @@ namespace ProjetoGamer_MVC.Controllers
 
             novoJogador.Email = form["Email"].ToString();
 
+            novoJogador.Senha = form["Senha"].ToString();
+
+            novoJogador.IdJogador = 1;
+
             //adiciona objeto na tabela do BD
             c.Jogador.Add(novoJogador);
 

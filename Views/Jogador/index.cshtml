@@ -14,6 +14,17 @@
     <label for="Email">Email</label>
     <input type="text" name="Email">
 
+    <label for="Senha">Senha</label>
+    <input type="text" name="Senha">
+
+    <label for="Equipe">Equipe</label>
+    <select id="Equipe">
+        @foreach (Equipe equipe in ViewBag.equipe)
+        {
+        <option value="@equipe.IdEquipe">@equipe.Nome</option>
+        }
+    </select>
+
     <button type="submit">Cadastrar</button>
 
 </form>
@@ -23,6 +34,7 @@
         <th>Id</th>
         <th>Nome</th>
         <th>Email</th>
+        <th>Equipe</th>
         <th>Ações</th>
     </thead>
 
@@ -34,6 +46,8 @@
             <td>@jogador.IdJogador</td>
             <td>@jogador.Nome</td>
             <td>@jogador.Email</td>
+            <td>
+                <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem do escudo da equipe @jogador.Equipe.Nome" width="50px"></td>
             <td>
                 <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
             </td>

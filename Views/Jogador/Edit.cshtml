@@ -4,19 +4,28 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edição de Equipe</h1>
+<h1>Edição de Jogadores</h1>
 
 <form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
 
-    <input type="hidden" name="IdEquipe" value="@ViewBag.Jogador.IdJogador">
+    <input type="hidden" name="IdJogador" value="@ViewBag.Jogador.IdJogador">
 
     <label for="">Nome</label>
     <input type="text" name="Nome" value="@ViewBag.Jogador.Nome">
 
     <label for="">Email</label>
-    <input type="text" name="Email" value="@ViewBag.Equipe.Email">
+    <input type="text" name="Email" value="@ViewBag.Jogador.Email">
+
+    <label for="Equipe">Equipe</label>
+    <select id="Equipe">
+        @foreach (Equipe equipe in ViewBag.equipe)
+        {
+            <option value="@equipe.IdEquipe">@equipe.Nome</option>
+        }
+    </select>
+
 
     <button type="submit">Atualizar</button>
 
 
-</form> 
+</form>

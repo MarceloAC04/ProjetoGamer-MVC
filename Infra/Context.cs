@@ -29,7 +29,9 @@ namespace ProjetoGamer_MVC.Infra
                 //User Id = "Nome do seu usuario de login"
                 //pwd = "senha do seu usuario"
 
-                optionsBuilder.UseSqlServer("Data Source = NOTE23-S15; initial catalog = gamerManha; User Id = sa; pwd = Senai@134; TrustServerCertificate = true");
+                // optionsBuilder.UseSqlServer("Data Source = NOTE23-S15; initial catalog = gamerManha; User Id = sa; pwd = Senai@134; TrustServerCertificate = true");
+                optionsBuilder.UseSqlServer("Data Source = DESKTOP-LAUT93L\\SQLEXPRESS; initial catalog = gamerManha; User Id = sa; pwd = 742617; TrustServerCertificate = true");
+                
             }
         }
         public DbSet<Jogador> Jogador { get; set; }
