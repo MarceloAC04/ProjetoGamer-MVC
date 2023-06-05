@@ -18,7 +18,7 @@
     <input type="text" name="Senha">
 
     <label for="Equipe">Equipe</label>
-    <select id="Equipe">
+    <select id="Equipe" name="Equipe">
         @foreach (Equipe equipe in ViewBag.equipe)
         {
         <option value="@equipe.IdEquipe">@equipe.Nome</option>

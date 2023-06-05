@@ -29,25 +29,20 @@ namespace ProjetoGamer_MVC.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
-            //instancia do objeto equipe
            Jogador novoJogador = new Jogador();
 
-            //atribuição de valores recebidos do formulário
             novoJogador.Nome = form["Nome"].ToString();
 
             novoJogador.Email = form["Email"].ToString();
 
             novoJogador.Senha = form["Senha"].ToString();
 
-            novoJogador.IdJogador = 1;
+            novoJogador.IdEquipe = int.Parse(form["Equipe"]);
 
-            //adiciona objeto na tabela do BD
             c.Jogador.Add(novoJogador);
 
-            //salva as alterações feitas do BD
             c.SaveChanges();
 
-            //Retorna para o local chamando a rota de listar(método index)
             return LocalRedirect("~/Jogador/Listar");
         }
 
