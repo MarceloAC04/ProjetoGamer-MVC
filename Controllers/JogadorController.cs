@@ -64,7 +64,7 @@ namespace ProjetoGamer_MVC.Controllers
         {
             Jogador jogador = c.Jogador.First(x => x.IdJogador == id);
 
-            ViewBag.jogador = jogador;
+            ViewBag.Jogador = jogador;
 
             return View("Edit");
         }
@@ -74,16 +74,20 @@ namespace ProjetoGamer_MVC.Controllers
         {
             Jogador jogador = new Jogador();
 
-            jogador.IdJogador = int.Parse(form["Idjogador"].ToString());
-
             jogador.Nome = form["Nome"].ToString();
 
             jogador.Email = form["Email"].ToString();
 
-            Jogador jogadorBuscado = c.Jogador.First(x => x.IdJogador == jogador.IdJogador);
+            jogador.Senha = form["Senha"].ToString();
+
+            jogador.IdEquipe = int.Parse(form["IdEquipe"]);
+
+            Jogador jogadorBuscado = c.Jogador.First(x => x.IdEquipe == jogador.IdEquipe);
 
             jogadorBuscado.Nome = jogador.Nome;
             jogadorBuscado.Email = jogador.Email;
+            jogadorBuscado.Senha= jogador.Senha;
+            jogadorBuscado.IdEquipe = jogador.IdEquipe;
 
             c.Jogador.Update(jogadorBuscado);
 
