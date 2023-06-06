@@ -8,7 +8,7 @@
 
 <form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
 
-    <input type="hidden" name="IdEquipe" value="@ViewBag.Jogador.IdEquipe"> 
+    <input type="hidden" name="IdJogador" value="@ViewBag.Jogador.IdJogador">
 
     <label for="">Nome</label>
     <input type="text" name="Nome" value="@ViewBag.Jogador.Nome">
@@ -19,14 +19,21 @@
     <label for="">Senha</label>
     <input type="text" name="Senha" value="@ViewBag.Jogador.Senha">
 
-    @* <label for="Equipe">Equipe</label>
+    <label for="Equipe">Equipe</label>
     <select id="Equipe" name="Equipe">
+        <option value="0">Selecione uma opção</option>
         @foreach (Equipe equipe in ViewBag.equipe)
         {
-            <option value="@equipe.IdEquipe">@equipe.Nome</option>
+            @if (equipe.IdEquipe == @ViewBag.Jogador.IdEquipe)
+            {
+            <option value="@equipe.IdEquipe" selected>@equipe.Nome</option>
+            }
+            else
+            {
+             <option value="@equipe.IdEquipe">@equipe.Nome</option>
+            }
         }
-    </select> *@
-
+    </select>
 
     <button type="submit">Atualizar</button>
 

@@ -37,7 +37,7 @@ namespace ProjetoGamer_MVC.Controllers
 
             novoJogador.Senha = form["Senha"].ToString();
 
-            novoJogador.IdEquipe = int.Parse(form["Equipe"]);
+            novoJogador.IdEquipe = int.Parse(form["Equipe"].ToString());
 
             c.Jogador.Add(novoJogador);
 
@@ -65,6 +65,7 @@ namespace ProjetoGamer_MVC.Controllers
             Jogador jogador = c.Jogador.First(x => x.IdJogador == id);
 
             ViewBag.Jogador = jogador;
+            ViewBag.Equipe = c.Equipe.ToList();
 
             return View("Edit");
         }
@@ -80,13 +81,20 @@ namespace ProjetoGamer_MVC.Controllers
 
             jogador.Senha = form["Senha"].ToString();
 
-            jogador.IdEquipe = int.Parse(form["IdEquipe"]);
+            jogador.IdJogador = int.Parse(form["IdJogador"].ToString());
 
-            Jogador jogadorBuscado = c.Jogador.First(x => x.IdEquipe == jogador.IdEquipe);
+            jogador.IdEquipe = int.Parse(form["Equipe"].ToString());
+
+            Jogador jogadorBuscado = c.Jogador.First(x => x.IdJogador == jogador.IdJogador);
 
             jogadorBuscado.Nome = jogador.Nome;
+
             jogadorBuscado.Email = jogador.Email;
+
             jogadorBuscado.Senha= jogador.Senha;
+
+            jogadorBuscado.IdJogador = jogador.IdJogador;
+
             jogadorBuscado.IdEquipe = jogador.IdEquipe;
 
             c.Jogador.Update(jogadorBuscado);
