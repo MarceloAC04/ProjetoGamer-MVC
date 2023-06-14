@@ -177,7 +177,6 @@ header .icons-header img {
   width: 20px;
 }
 
-
 /********************* Footer *********************/
 footer {
   padding: 40px 20px;
@@ -345,17 +344,6 @@ footer #copyright {
   font-size: .9rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* Medias Querias */
 
 @media screen and (min-width: 992px) {
@@ -465,6 +453,7 @@ footer #copyright {
 
   }
 
+
   /* Footer */
 
   footer .footer-flex {
@@ -498,14 +487,4 @@ footer #copyright {
   }
 
 
-
-
-
-
-
-
-
-
-
-  
 }

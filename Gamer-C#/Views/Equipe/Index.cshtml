@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer</title>
-    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/header-footer.css">
     <link rel="stylesheet" href="~/css/equipes.css">
 </head>
 
@@ -62,7 +62,9 @@ else
                             </a>
                             -
                             <a asp-area="" asp-controller="Equipe" asp-action="Editar"
-                                asp-route-id="@equipe.IdEquipe">Editar</a>
+                                asp-route-id="@equipe.IdEquipe">
+                                <img class="yellow-trash" src="~/assets/editar.png" alt="">
+                                </a>
                         </td>
                     </tr>
                 }

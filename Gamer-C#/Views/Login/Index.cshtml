@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="~/css/login.css">
 </head>
 
-<h2>
-    @TempData.Peek("Message")
-</h2>
 
 
 <!-- FORMULÁRIO DE LOGIN -->
@@ -40,6 +37,9 @@
             </div>
 
             <button type="submit" class="btn-logar">Logar</button>
+            <br>
+            <span> @TempData.Peek("Message") </span>
+                
         </form>
     </div>
 
