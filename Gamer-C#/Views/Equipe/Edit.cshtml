@@ -3,8 +3,14 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edição de Equipe</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/equipes.css">
+</head>
 
 @if (ViewBag.UserName == null)
 {
@@ -12,20 +18,41 @@
 }
 else
 {
-    
-<form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
-
-    <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
-
-    <label for="">Nome</label>
-    <input type="text" name="Nome" value="@ViewBag.Equipe.Nome">
-
-    <label for="">Imagem</label>
-    <input type="file" name="Imagem" value="@ViewBag.Equipe.Imagem">
-
-    <button type="submit">Atualizar</button>
+    <main>
+        <section class="container-grid cadastro-equipes">
 
 
-</form> 
+            <form class="frm-cad-equipe" method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
+                <div class="cadequipe-titulo">
+                    <h1>Edição de Equipes</h1>
+                    <hr>
+                </div>
+
+                <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+                <input class="campo-entrada" type="text" name="Nome" value="@ViewBag.Equipe.Nome" required
+                    placeholder="Digite o nome da sua equipe:">
+                <label class="foto" for="foto-file">
+                    Nenuma imagem selecionada...
+                    <input type="file" id="foto-file" value="@ViewBag.Equipe.Imagem" name="Imagem">
+                </label>
+
+                <button type="submit">Atualizar</button>
+            </form>
+        </section>
+    </main>
+
+    @* <form method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
+
+<input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+
+<label for="">Nome</label>
+<input type="text" name="Nome" value="@ViewBag.Equipe.Nome">
+
+<label for="">Imagem</label>
+<input type="file" name="Imagem" value="@ViewBag.Equipe.Imagem">
+
+
+
+</form> *@
 
 }
