@@ -49,17 +49,24 @@ main .cadastro-equipes .frm-cad-equipe {
     border: 2px solid transparent;
     border-radius: 8px;
     background:
-        /* fundo */
-        linear-gradient(to right bottom, rgba(27, 20, 38, .8), rgba(60, 3, 65, .38)) padding-box,
+    /* fundo */
+    linear-gradient(to right bottom, rgba(27, 20, 38, .8), rgba(60, 3, 65, .38)) padding-box,
         /* fundo borda */
         linear-gradient(90deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, .1)) border-box;
-    backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+}
+
+main .cadastro-equipes .frm-cad-equipe select option:default {
+    color: black;
+    font-family: TitilliumWeb-Thin, sans-serif;
+    font-size: 16px;
 }
 
 /* Título */
 main .cadastro-equipes .frm-cad-equipe .cadequipe-titulo {
     margin-bottom: 40px;
 }
+
 main .cadastro-equipes .frm-cad-equipe .cadequipe-titulo h1 {
     font-family: TitilliumWeb-Black, sans-serif;
     font-size: 28px;
@@ -105,9 +112,10 @@ main .cadastro-equipes .frm-cad-equipe .campo-entrada {
 
 /* File Field */
 
-main .cadastro-equipes .frm-cad-equipe .foto input { 
+main .cadastro-equipes .frm-cad-equipe .foto input {
     display: none;
 }
+
 main .cadastro-equipes .frm-cad-equipe .foto {
     display: flex;
     align-items: center;
@@ -115,6 +123,7 @@ main .cadastro-equipes .frm-cad-equipe .foto {
     font-size: 10px;
     width: 100%;
 }
+
 main .cadastro-equipes .frm-cad-equipe .foto::before {
     display: flex;
     justify-content: center;
@@ -237,6 +246,7 @@ main .cadastro-equipes table td img.yellow-trash {
         margin: 0 auto;
         /* border: 1px solid #EC4358; */
     }
+
     main {
         background-image: url(../images/background-jogadores.png);
         background-size: cover;
@@ -244,12 +254,15 @@ main .cadastro-equipes table td img.yellow-trash {
         background-repeat: no-repeat;
         margin-top: 0;
     }
+
     main .cadastro-equipes .frm-cad-equipe {
         width: 800px;
     }
+
     main .cadastro-equipes .frm-cad-equipe button {
         max-width: 243px;
     }
+
     main .cadastro-equipes table {
         width: 800px;
     }
