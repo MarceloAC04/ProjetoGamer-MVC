@@ -12,16 +12,24 @@
     <link rel="stylesheet" href="~/css/jogadores.css">
 </head>
 
-@if (ViewBag.UserName == null)
-{
-    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-}
-else
-{
-    <main>
+<main>
 
-        <section class="container-grid cadastro-equipes">
+    <section class="container-grid cadastro-equipes">
 
+        @if (ViewBag.UserName == null)
+        {
+            <div class="frm-cad-equipe">
+                <div class="cadequipe-titulo">
+                <h1>Faça o login para acessar</h1>
+                <hr>
+                </div>
+                <button type="submit">
+                <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+                </button>
+            </div>
+        }
+        else
+        {
 
             <form class="frm-cad-equipe" method="post" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
                 <div class="cadequipe-titulo">
@@ -33,7 +41,7 @@ else
                     <option value="0">Selecione uma Equipe</option>
                     @foreach (Equipe equipe in ViewBag.equipe)
                     {
-                        <option selected="true" value="@equipe.IdEquipe">@equipe.Nome</option>
+                        <option id="Time" value="@equipe.IdEquipe">@equipe.Nome</option>
                     }
                 </select>
 
@@ -73,16 +81,15 @@ else
                                     <img class="yellow-trash" src="~/assets/trash.png" alt="">
                                 </a>
                                 -
-                                <a asp-area="" asp-controller="Jogador" asp-action="Editar"
-                                    asp-route-id="@jogador.IdJogador">
-                                   <img  class="yellow-trash" src="~/assets/editar.png" alt=""/>
-                                    </a>
+                                <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">
+                                    <img class="yellow-trash" src="~/assets/editar.png" alt="" />
+                                </a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
-        </section>
-    </main>
+        }
+    </section>
+</main>
 
-}

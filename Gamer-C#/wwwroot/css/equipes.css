@@ -74,6 +74,11 @@ main .cadastro-equipes .frm-cad-equipe .cadequipe-titulo hr {
     border: 1px solid #F9AA01;
 }
 
+main .cadastro-equipes .frm-cad-equipe button a {
+    text-decoration: none;
+    color: black;
+}
+
 
 main .cadastro-equipes .frm-cad-equipe .campo-entrada {
     width: 100%;
