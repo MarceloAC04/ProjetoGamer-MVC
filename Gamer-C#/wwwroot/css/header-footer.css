@@ -403,7 +403,7 @@ footer #copyright {
 
   header .nav-bkg nav {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     /* border: 1px solid white; */
   }
 
@@ -455,6 +455,12 @@ footer #copyright {
 
 
   /* Footer */
+
+  footer {
+    background-image: url(../images/backgound-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   footer .footer-flex {
     flex-direction: row;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoGamer_MVC</title>
     <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/header-footer.css"/>
+    <link rel="stylesheet" href="~/css/header-footer.css" />
 </head>
 
 <body>
@@ -94,7 +94,7 @@
         </div>
     </header>
 
-    
+
     @RenderBody()
 
     <!-- FOOTER -->
@@ -131,12 +131,13 @@
                     <li class="menu-ftitem"><a asp-controller="Home" asp-action="Index">Início</a></li>
                     <li class="menu-ftitem"><a href="~/#noticias">Notícias</a></li>
                     <li class="menu-ftitem"><a asp-controller="Login" asp-action="Index">Login</a></li>
-                     @if (ViewBag.UserName != null)
-                     {
-                    <li class="menu-ftitem"><a asp-controller="Jogador" asp-action="Index">Jogadores</a></li>
-                    <li class="menu-ftitem" id="link-equipe"><a asp-controller="Equipe" asp-action="Index">Equipes</a></li>
-                    <li class="menu-ftitem"><a asp-controller="Login" asp-action="Logout">Logout</a></li>
-                     }
+                    @if (ViewBag.UserName != null)
+                    {
+                        <li class="menu-ftitem"><a asp-controller="Jogador" asp-action="Index">Jogadores</a></li>
+                        <li class="menu-ftitem" id="link-equipe"><a asp-controller="Equipe" asp-action="Index">Equipes</a>
+                        </li>
+                        <li class="menu-ftitem"><a asp-controller="Login" asp-action="Logout">Logout</a></li>
+                    }
                 </ul>
             </div>
 
@@ -177,7 +178,6 @@
         <div id="copyright">
             &#169;Copyright2022-GamerJogosDigitais
         </div>
-
         <img src="~/assets/Botao_voltar_ao_topo.svg" id="back-to-top" alt="Voltar ao Topo">
     </footer>
     @await RenderSectionAsync("Scripts", required: false)

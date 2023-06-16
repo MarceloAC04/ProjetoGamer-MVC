@@ -242,7 +242,7 @@ section.progamer .card-bkg .produto h3 {
 /********************* Notícias *********************/
 
 section.noticias {
-    background-image: url(../images/backgrund_notícias-mobile.png);
+    background-image: url(../images/backgrund_notícias-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px 20px 20px;
@@ -385,7 +385,7 @@ section.noticias .card-noticia p {
     section.noticias {
         position: relative;
         z-index: 40;
-        background-image: url(../images/backgrund_notícias.png);
+        background-image: url(../images/backgrund_notícias.png);
     }
 
     section.noticias:after {

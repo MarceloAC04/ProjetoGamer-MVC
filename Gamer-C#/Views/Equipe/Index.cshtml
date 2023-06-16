@@ -63,13 +63,12 @@
                             <td>@equipe.Nome</td>
                             <td><img class="green-play" src="/img/Equipes/@equipe.Imagem"
                                     alt="Imagem do escudo da equipe @equipe.Nome"></td>
-                            <td>
+                            <td class="action">
                                 <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">
                                     <img class="yellow-trash" src="~/assets/trash.png" alt="">
                                 </a>
-                                -
                                 <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">
-                                    <img class="yellow-trash" src="~/assets/editar.png" alt="">
+                                    <img  src="~/assets/editar.svg" alt="">
                                 </a>
                             </td>
                         </tr>

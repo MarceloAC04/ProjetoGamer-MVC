@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +13,23 @@
     <link rel="stylesheet" href="~/css/jogadores.css">
 </head>
 
-@if (ViewBag.UserName == null)
-{
-    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-}
-else
-{
+<main>
 
-    <main>
-        <section class="container-grid cadastro-equipes">
-
-
+    <section class="container-grid cadastro-equipes">
+    @if (ViewBag.UserName == null)
+    {
+        <div class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Faça o login para acessar</h1>
+                <hr>
+            </div>
+            <button type="submit">
+                <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+            </button>
+        </div>
+    }
+    else
+    {
             <form class="frm-cad-equipe" method="post" action='@Url.Action("Atualizar")' enctype="multipart/form-data">
                 <div class="cadequipe-titulo">
                     <h1>Edição de Jogadores</h1>
@@ -56,7 +63,6 @@ else
 
                 <button type="submit">Atualizar</button>
             </form>
+       }
         </section>
-    </main>
-
-}
+</main>
